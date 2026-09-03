@@ -30,6 +30,8 @@ AssetStoreTools/
 # Double-check these two before keeping them - see notes below
 .xr/
 Assets/XR/Tunables/
+Assets/XR/
+Assets/XRI/Settings/
 
 # =========================================================================
 # Visual Studio Code & Visual Studio Community Exclusions
