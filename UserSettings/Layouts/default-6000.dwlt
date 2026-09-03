@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 860.8
-    y: 59.2
+    x: 810.4
+    y: 61.600002
     width: 1086.4
-    height: 1060.8
+    height: 1052.8
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 2}
@@ -45,7 +45,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1086.4
-    height: 1060.8
+    height: 1052.8
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1040.8
+    y: 1032.8
     width: 1086.4
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -114,11 +114,11 @@ MonoBehaviour:
     x: 0
     y: 36
     width: 1086.4
-    height: 1004.80005
+    height: 996.80005
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 36
+  controlID: 63
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -140,11 +140,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1086.4
-    height: 1004.80005
+    height: 996.80005
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 37
+  controlID: 64
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -166,11 +166,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1086.4
-    height: 641.6
+    height: 636.8
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 38
+  controlID: 40
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -190,7 +190,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 231.2
-    height: 641.6
+    height: 636.8
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
@@ -216,9 +216,9 @@ MonoBehaviour:
     x: 231.2
     y: 0
     width: 855.2
-    height: 641.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 636.8
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -242,9 +242,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 641.6
+    y: 636.8
     width: 1086.4
-    height: 363.20007
+    height: 360.00006
   m_MinSize: {x: 230, y: 276}
   m_MaxSize: {x: 10000, y: 10026}
   m_ActualView: {fileID: 16}
@@ -274,8 +274,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "UnityEditor.MainToolbarWindow\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 860.8
-    y: 59.2
+    x: 810.4
+    y: 61.600002
     width: 1086.4
     height: 36
   m_SerializedDataModeController:
@@ -540,10 +540,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1092
-    y: 95.200005
+    x: 1041.6
+    y: 97.6
     width: 854.2
-    height: 615.6
+    height: 610.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -600,9 +600,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 854.2
-      height: 594.6
+      height: 589.8
     m_Scale: {x: 0.41708985, y: 0.41708985}
-    m_Translation: {x: 427.1, y: 297.3}
+    m_Translation: {x: 427.1, y: 294.9}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -610,12 +610,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -1024
-      y: -712.796
+      y: -707.0419
       width: 2048
-      height: 1425.592
+      height: 1414.0837
     m_MinimalGUI: 1
   m_defaultScale: 0.41708985
-  m_LastWindowPixelSize: {x: 1067.75, y: 769.5}
+  m_LastWindowPixelSize: {x: 1067.75, y: 763.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -643,10 +643,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 860.8
-    y: 95.200005
+    x: 810.4
+    y: 97.6
     width: 230.2
-    height: 615.6
+    height: 610.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -664,17 +664,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -2182
+      - m_Data: 52058
       m_LastClickedID:
-        m_Data: -2182
+        m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -2182
-      - m_Data: -2170
       - m_Data: -1334
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: XR Origin (XR Rig)
-        m_OriginalName: XR Origin (XR Rig)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -682,10 +680,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: -2182
+          m_Data: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1223,7 +1221,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 1.3614397, z: 0}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1275,7 +1273,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 1.2641202
     speed: 2
-    m_Value: 12.124355
+    m_Value: 1.2641202
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1368,10 +1366,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 860.8
-    y: 736.8
+    x: 810.4
+    y: 734.4
     width: 1086.4
-    height: 337.20007
+    height: 334.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1396,7 +1394,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Prefabs
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1406,7 +1404,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Prefabs
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\COLLEGE\Senior Design\Powered-Wheelchair-Soccer
   m_LockTracker:
@@ -1415,16 +1413,16 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 60018
+    - m_Data: 53512
     m_LastClickedID:
-      m_Data: 60018
+      m_Data: 53512
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51264
-    - m_Data: 51546
-    - m_Data: 56384
-    - m_Data: 56386
-    - m_Data: 56388
+    - m_Data: 53512
+    - m_Data: 53798
+    - m_Data: 53812
+    - m_Data: 53814
+    - m_Data: 53816
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1458,7 +1456,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51264
+    - m_Data: 53512
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1486,9 +1484,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -2182
-    m_LastClickedInstanceID: -2182
-    m_HadKeyboardFocusLastEvent: 1
+    - m_Data: 52058
+    m_LastClickedInstanceID: 52058
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
       m_UserAcceptedRename: 0
