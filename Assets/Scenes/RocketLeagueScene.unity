@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 608053530}
   - component: {fileID: 608053529}
   - component: {fileID: 608053528}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: GoalBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 1742642854}
   - component: {fileID: 1742642853}
   - component: {fileID: 1742642852}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: GoalBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,6 +1066,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944131804917401860, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Height
       value: 1.36144
@@ -1073,6 +1077,10 @@ PrefabInstance:
     - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501755809687671949, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1174,18 +1182,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1272011158}
     m_Modifications:
-    - target: {fileID: 2596118202050502524, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259998754324783094, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259998754324783094, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_TagString
-      value: Ball
-      objectReference: {fileID: 0}
     - target: {fileID: 4263517071686236721, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1230,26 +1226,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoccerBall
       objectReference: {fileID: 0}
-    - target: {fileID: 4427876043537960045, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4427876043537960045, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5029622276153284251, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5029622276153284251, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916173509357771360, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1265,7 +1241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 494146614997280831, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1251103593832527217, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1333,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6222334755465633225, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8535263386656984437, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalPosition.x
