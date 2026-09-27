@@ -1,17 +1,16 @@
 using UnityEngine;
 
-public class Governer : MonoBehaviour
+public class World : MonoBehaviour
 {
-
 
     private void OnEnable()
     {
-        Trigger.TriggerEvent += HandleTrigger;
+        Goal.TriggerEvent += HandleTrigger;
     }
 
     private void OnDisable()
     {
-        Trigger.TriggerEvent -= HandleTrigger;
+        Goal.TriggerEvent -= HandleTrigger;
     }
 
     private void HandleTrigger(GameObject trigger, GameObject cause)

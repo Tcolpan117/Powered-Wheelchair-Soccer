@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Trigger : MonoBehaviour
+public class Goal : MonoBehaviour
 {
     public static event Action<GameObject, GameObject> TriggerEvent;
 
