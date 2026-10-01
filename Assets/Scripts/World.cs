@@ -19,7 +19,7 @@ public class World : MonoBehaviour
 
         switch (name)
         {
-            case "GoalBox":
+            case "AwayGoal" or "HomeGoal":
                 if (cause.CompareTag("Ball")) ScoreGoal(cause);
                 break;
         }

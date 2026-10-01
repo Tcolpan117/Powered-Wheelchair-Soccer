@@ -5,11 +5,18 @@ public static class RegistryIndex
 {
     
 }
-public interface RegistryItem
+public class RegistryItem
 {
-    string name {get;}
-    object item {get;}
+    public string identifier {get;}
+    public object data {get;}
+
+    public RegistryItem(string identifier, object data)
+    {
+        this.identifier = identifier;
+        this.data = data;
+    }
 }
+
 
 public class WorldRegister : MonoBehaviour
 {
@@ -30,18 +37,18 @@ public class WorldRegister : MonoBehaviour
 
     public void Register(RegistryItem item)
     {
-        _registry[item.name] = item;
+        _registry[item.identifier] = item;
     }
 
     public void UnRegister(RegistryItem item)
     {
-        _registry.Remove(item.name);
+        _registry.Remove(item.identifier);
     }
 
-    public T GetItem<T>(string name) where T : class
+    public T GetItem<T>(string identifier) where T : class
     {
-        if (_registry.TryGetValue(name, out RegistryItem registryItem)){
-            return registryItem.item as T;
+        if (_registry.TryGetValue(identifier, out RegistryItem registryItem)){
+            return registryItem.data as T;
         }
         return null;
     }
