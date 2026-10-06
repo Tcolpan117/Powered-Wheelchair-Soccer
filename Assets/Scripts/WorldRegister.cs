@@ -1,19 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class RegistryIndex
-{
-    
-}
+public interface IRegistryProvider{RegistryItem item {get;}}
+
 public class RegistryItem
 {
-    public string identifier {get;}
+    public string id {get;}
     public object data {get;}
-
-    public RegistryItem(string identifier, object data)
+    public GameObject gameObject {get;}
+    public RegistryItem(string id, object data, GameObject gameObject)
     {
-        this.identifier = identifier;
+        this.id = id;
         this.data = data;
+        this.gameObject = gameObject;
     }
 }
 
@@ -21,10 +20,28 @@ public class RegistryItem
 public class WorldRegister : MonoBehaviour
 {
     public static WorldRegister Instance {get; private set;}
-
     private Dictionary<string, RegistryItem> _registry = new Dictionary<string, RegistryItem>();
 
-     void Awake()
+    public void Register(RegistryItem item)
+    {
+        _registry[item.id] = item;
+    }
+
+    public void UnRegister(RegistryItem item)
+    {
+        _registry.Remove(item.id);
+    }
+
+    public static RegistryItem GetItem(string id)
+    {
+        if (Instance._registry.TryGetValue(id, out RegistryItem registryItem)){
+            return registryItem;
+        }
+        return null;
+    }
+
+
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -33,23 +50,5 @@ public class WorldRegister : MonoBehaviour
         }
 
         Instance = this;
-    }
-
-    public void Register(RegistryItem item)
-    {
-        _registry[item.identifier] = item;
-    }
-
-    public void UnRegister(RegistryItem item)
-    {
-        _registry.Remove(item.identifier);
-    }
-
-    public T GetItem<T>(string identifier) where T : class
-    {
-        if (_registry.TryGetValue(identifier, out RegistryItem registryItem)){
-            return registryItem.data as T;
-        }
-        return null;
     }
 }

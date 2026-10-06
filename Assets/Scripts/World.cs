@@ -13,20 +13,21 @@ public class World : MonoBehaviour
         Goal.TriggerEvent -= HandleTrigger;
     }
 
-    private void HandleTrigger(GameObject trigger, GameObject cause)
+    private void HandleTrigger(string triggerId, string causeId)
     {
-        string name = trigger.name;
+        string id = triggerId;
 
-        switch (name)
+        switch (id)
         {
             case "AwayGoal" or "HomeGoal":
-                if (cause.CompareTag("Ball")) ScoreGoal(cause);
+                if (causeId == "Ball") ScoreGoal(causeId);
                 break;
         }
     }
 
-    private void ScoreGoal(GameObject ball)
+    private void ScoreGoal(string causeId)
     {
+        GameObject ball = WorldRegister.GetItem(causeId).gameObject;
 
         Rigidbody rb = ball.GetComponent<Rigidbody>();
 
