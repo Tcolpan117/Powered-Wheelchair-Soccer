@@ -17,38 +17,27 @@ public class RegistryItem
 }
 
 
-public class WorldRegister : MonoBehaviour
+public static class WorldRegister
 {
-    public static WorldRegister Instance {get; private set;}
-    private Dictionary<string, RegistryItem> _registry = new Dictionary<string, RegistryItem>();
+    private static readonly Dictionary<string, RegistryItem> _registry = new();
 
-    public void Register(RegistryItem item)
+    public static void Register(RegistryItem item)
     {
         _registry[item.id] = item;
     }
 
-    public void UnRegister(RegistryItem item)
+    public static void UnRegister(RegistryItem item)
     {
         _registry.Remove(item.id);
     }
 
     public static RegistryItem GetItem(string id)
     {
-        if (Instance._registry.TryGetValue(id, out RegistryItem registryItem)){
+        if (_registry.TryGetValue(id, out RegistryItem registryItem)){
             return registryItem;
         }
-        return null;
+
+        throw new KeyNotFoundException($"No registry item with id '{id}'");
     }
 
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-    }
 }

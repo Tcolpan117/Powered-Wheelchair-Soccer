@@ -6,7 +6,7 @@ public class GoalData
     public Team team {get;set;}
     public Vector3 location {get;set;}
     public Vector3 dimentions {get;set;}
-    
+
     public GoalData(Team team, Vector3 location, Vector3 dimentions)
     {
         this.team = team;
@@ -46,5 +46,6 @@ public class Goal : MonoBehaviour, IRegistryProvider
     }
 
     void Awake(){ ConstructRegistryItem(); }
-    void Start(){ WorldRegister.Instance.Register(item); }
+    void Start(){ WorldRegister.Register(item); }
+    void OnDestroy(){WorldRegister.UnRegister(item);}
 }

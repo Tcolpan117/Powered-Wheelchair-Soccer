@@ -25,10 +25,12 @@ public class Ball : MonoBehaviour, IRegistryProvider
 
 
     void Awake(){ ConstructRegistryItem(); }
-    void Start(){ WorldRegister.Instance.Register(item); }
+    void Start(){ WorldRegister.Register(item); }
     
     void Update()
     {
         data.location = transform.position;
     }
+
+    void OnDestroy(){WorldRegister.UnRegister(item);}
 }
