@@ -17,6 +17,16 @@ public class Ball : MonoBehaviour, IRegistryProvider
     private BallData data;
 
 
+    public void ResetBall()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+
+        rb.linearVelocity = Vector3.zero; 
+        rb.angularVelocity = Vector3.zero;
+
+        transform.localPosition = Vector3.zero + Vector3.up;
+    }
+
     private void ConstructRegistryItem()
     {
         data = new BallData(transform.position);

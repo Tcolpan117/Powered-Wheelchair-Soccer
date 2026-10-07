@@ -14,6 +14,8 @@ public class RegistryItem
         this.data = data;
         this.gameObject = gameObject;
     }
+
+    public T Get<T>() where T : Component => gameObject.GetComponent<T>();
 }
 
 
