@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 38838132}
   - component: {fileID: 38838133}
-  - component: {fileID: 38838134}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -166,18 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e20674043fd1f4e9021961f8f7005c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Governer
---- !u!114 &38838134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38838130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c036f3a053ced4b8b7e612ca36bad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1001 &386507792
 PrefabInstance:
   m_ObjectHideFlags: 0

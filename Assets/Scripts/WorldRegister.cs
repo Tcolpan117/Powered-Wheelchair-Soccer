@@ -20,24 +20,8 @@ public class RegistryItem
 public static class WorldRegister
 {
     private static readonly Dictionary<string, RegistryItem> _registry = new();
-
-    public static void Register(RegistryItem item)
-    {
-        _registry[item.id] = item;
-    }
-
-    public static void UnRegister(RegistryItem item)
-    {
-        _registry.Remove(item.id);
-    }
-
-    public static RegistryItem GetItem(string id)
-    {
-        if (_registry.TryGetValue(id, out RegistryItem registryItem)){
-            return registryItem;
-        }
-
-        throw new KeyNotFoundException($"No registry item with id '{id}'");
-    }
+    public static void Register(RegistryItem item) => _registry[item.id] = item;
+    public static void UnRegister(RegistryItem item) => _registry.Remove(item.id);
+    public static RegistryItem GetItem(string id) => _registry[id];
 
 }

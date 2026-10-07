@@ -45,7 +45,7 @@ public class Goal : MonoBehaviour, IRegistryProvider
         item = new RegistryItem(id, data, gameObject);
     }
 
-    void Awake(){ ConstructRegistryItem(); }
-    void Start(){ WorldRegister.Register(item); }
-    void OnDestroy(){WorldRegister.UnRegister(item);}
+    void Awake() => ConstructRegistryItem();
+    void Start() => WorldRegister.Register(item);
+    void OnDestroy() => WorldRegister.UnRegister(item);
 }
