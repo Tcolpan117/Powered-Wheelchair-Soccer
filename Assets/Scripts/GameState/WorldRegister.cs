@@ -6,12 +6,10 @@ public interface IRegistryProvider{RegistryItem item {get;}}
 public class RegistryItem
 {
     public string id {get;}
-    public object data {get;}
     public GameObject gameObject {get;}
-    public RegistryItem(string id, object data, GameObject gameObject)
+    public RegistryItem(string id, GameObject gameObject)
     {
         this.id = id;
-        this.data = data;
         this.gameObject = gameObject;
     }
 
