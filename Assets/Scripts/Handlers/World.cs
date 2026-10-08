@@ -26,10 +26,21 @@ public class World : MonoBehaviour
         }
     }
 
-    
+    private void ResetPlayers()
+    {
+        WorldRegister.GetItem("AwayLeftFielder").Get<Player>().ResetPlayer();
+        WorldRegister.GetItem("AwayRightFielder").Get<Player>().ResetPlayer();
+        WorldRegister.GetItem("HomeLeftFielder").Get<Player>().ResetPlayer();
+        WorldRegister.GetItem("HomeRightFielder").Get<Player>().ResetPlayer();
+        WorldRegister.GetItem("HomeGoaly").Get<Player>().ResetPlayer();
+        WorldRegister.GetItem("AwayGoaly").Get<Player>().ResetPlayer();
+
+
+    }
 
     private void ScoreGoal(RegistryItem trigger, RegistryItem cause)
     {
+        ResetPlayers();
         cause.Get<Ball>().ResetBall();
     }
 

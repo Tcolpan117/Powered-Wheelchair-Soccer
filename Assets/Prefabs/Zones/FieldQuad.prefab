@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4620124560239562677}
   - component: {fileID: 1400930676378920554}
   - component: {fileID: 3992208210231481289}
+  - component: {fileID: -9017119481697473029}
   m_Layer: 0
   m_Name: FieldQuad
   m_TagString: Untagged
@@ -90,3 +91,17 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-9017119481697473029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167713253600636549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b457ca98b0be1994f9043fb615f53c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Field
+  id: 
+  team: 0
