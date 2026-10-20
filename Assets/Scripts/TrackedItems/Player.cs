@@ -16,6 +16,12 @@ public class Player : MonoBehaviour, IRegistryProvider
     public Vector3 GetPosition(){ return transform.position;}
     public void ResetPlayer()
     {
+        // Clear leftover speed so the chair doesn't keep driving after being moved back.
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        if (TryGetComponent(out WheelchairMotor motor)) motor.Stop();
+
         Vector3 position;
 
         switch (id)

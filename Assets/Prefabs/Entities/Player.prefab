@@ -294,6 +294,8 @@ GameObject:
   - component: {fileID: 8026614708821792563}
   - component: {fileID: 4725581401336199127}
   - component: {fileID: 208130455761708267}
+  - component: {fileID: 6310679967113239626}
+  - component: {fileID: 2759428061401717137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -310,13 +312,14 @@ Transform:
   m_GameObject: {fileID: 2941320174885482939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5, y: -0.009, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2302046079208121562}
   - {fileID: 6860962174147776554}
   - {fileID: 47482799006340543}
+  - {fileID: 6011255784161807805}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &8026614708821792563
@@ -326,7 +329,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941320174885482939}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 664fa824f0d78f34b8a1b78f03222136, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -365,7 +368,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &208130455761708267
 MonoBehaviour:
@@ -382,6 +385,38 @@ MonoBehaviour:
   id: HomeLeftFielder
   team: 0
   role: 2
+--- !u!114 &6310679967113239626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941320174885482939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc7c1d84dd3f46458fe0b453a4d272f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WheelchairMotor
+  stats: {fileID: 11400000, guid: 8a6c62fb0d6eef549a99e54095d884c2, type: 2}
+  lockTipping: 1
+  bodyCollider: {fileID: 0}
+  groundCheckDistance: 0.1
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2759428061401717137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941320174885482939}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b554c136ed7a84e8864bf616c1b70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWheelchairDriver
+  driveAction: {fileID: 1796968051169065754, guid: 6fd837e07d2abb447bf75232033590b0, type: 3}
 --- !u!1 &3634505859865531507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,6 +1495,37 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00053945184, y: 0.008763122, z: -0.005469838}
     m_Extent: {x: 0.016178574, y: 0.026795764, z: 0.007769823}
   m_DirtyAABB: 0
+--- !u!1 &8051589735372097503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6011255784161807805}
+  m_Layer: 0
+  m_Name: SeatAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6011255784161807805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051589735372097503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 286210374821777562}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8097288702058783173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,6 +1988,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4321abb614b926444beddc825f4383a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4321abb614b926444beddc825f4383a4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4321abb614b926444beddc825f4383a4, type: 3}
