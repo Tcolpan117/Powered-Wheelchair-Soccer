@@ -348,7 +348,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941320174885482939}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -365,7 +365,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &208130455761708267
 MonoBehaviour:
@@ -379,9 +379,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d8a98b151803c4cbd2c6bafbd2d8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  id: HomeLeftFielder
+  id: HomeGoaly
   team: 0
   role: 2
+  Controller:
+    rig: {fileID: 0}
+    offset: {x: 0, y: -0.3, z: -0.25}
+    rb: {fileID: 0}
 --- !u!1 &3634505859865531507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4321abb614b926444beddc825f4383a4, type: 3}
       propertyPath: m_Name
-      value: Fixed VR WhS Game Player Model Colored Mk2
+      value: Dummy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
