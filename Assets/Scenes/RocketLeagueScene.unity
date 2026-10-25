@@ -204,7 +204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1151,6 +1151,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
       value: 
       objectReference: {fileID: 2036086714}
@@ -1180,7 +1184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: m_LocalRotation.w
