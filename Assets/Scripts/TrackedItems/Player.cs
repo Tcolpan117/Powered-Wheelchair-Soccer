@@ -2,87 +2,101 @@ using UnityEngine;
 using Unity.XR.CoreUtils;
 
 [System.Serializable]
-public class XRPossession
+public class Controller
 {
-    public XROrigin rig;
-    public Vector3 offset;
-    public Rigidbody rb;
+    public XROrigin xrRig;
+    public Rigidbody body;
+    public Vector3 rigOffset;
 
-    private static bool claimed;
-    private Transform body;
-    private Transform origin;
-    private Vector3 prevPos;
+    private Transform avatar;
+    private Transform rig;
+    private Vector3 rigLastPosition;
+
+    private static bool isPossessed;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-    private static void ResetClaim() => claimed = false;
+    private static void ResetIsPossessed() => isPossessed = false;
 
-    private void Move() => origin.position = prevPos = body.position + origin.rotation * offset;
-
-    public void Init(Transform player)
+    private void PlaceRigInAvatar()
     {
-        body = player;
-        if (claimed || rig == null || rb == null) return;
-
-        claimed = true;
-        origin = rig.transform;
-        Move();
+        rig.position = avatar.position + rig.rotation * rigOffset;
+        rigLastPosition = rig.position;
     }
 
-    public void Face(Quaternion rotation)
+    public void Embody(Transform avatarTransform)
     {
-        body.rotation = rotation;
-        if (origin != null) origin.rotation = rotation;
+        avatar = avatarTransform;
+
+        if (isPossessed || xrRig == null || body == null) return;
+
+        isPossessed = true;
+        rig = xrRig.transform;
+        rig.rotation = avatar.rotation;
+        PlaceRigInAvatar();
     }
 
-    public void Follow()
+    public void Turn(Quaternion direction)
     {
-        if (origin == null) return;
+        avatar.rotation = direction;
+        if (rig != null) rig.rotation = direction;
+    }
 
-        rb.linearVelocity = (origin.position - prevPos) / Time.deltaTime;
-        Move();
-        body.rotation = origin.rotation;
+    public void FollowRig()
+    {
+        if (rig == null) return;
+
+        Vector3 velocity = (rig.position - rigLastPosition) / Time.deltaTime;
+        velocity.y = body.linearVelocity.y; // gravity decides falling, not the rig
+        body.linearVelocity = velocity;
+
+        PlaceRigInAvatar();
+        avatar.rotation = rig.rotation;
     }
 }
 
 public class Player : MonoBehaviour, IRegistryProvider
 {
-    public RegistryItem item {get; private set;}
+    public RegistryItem item { get; private set; }
 
     [SerializeField] private string id;
     [SerializeField] private Team team;
     [SerializeField] private Role role;
-    [SerializeField] private XRPossession Controller;
+    [SerializeField] private Controller avatar;
 
     private void ConstructRegistryItem() => item = new RegistryItem(id, gameObject);
 
     void Awake()
     {
         ConstructRegistryItem();
-        Controller.Init(transform);
-        Controller.Face(transform.rotation);
+        avatar.Embody(transform);
     }
 
     void Start() => WorldRegister.Register(item);
+    void Update() => avatar.FollowRig();
     void OnDestroy() => WorldRegister.UnRegister(item);
+    
 
-    public Vector3 GetPosition() => transform.position;
-
-    private Vector3 SpawnPosition(string side)
+    private Vector3 SpawnPosition(string teamSide)
     {
-        if (id.EndsWith("Goaly"))
-            return WorldRegister.GetItem(side + "Pen").Get<Pen>().GetPosition();
+        bool isGoalie = id.EndsWith("Goaly");
+        if (isGoalie)
+            return WorldRegister.GetItem(teamSide + "Pen").Get<Pen>().GetPosition();
 
-        string field = id.Contains("Left") ? "LeftField" : "RightField";
-        return WorldRegister.GetItem(side + field).Get<Field>().GetPosition();
+        string fieldName = id.Contains("Left") ? "LeftField" : "RightField";
+        return WorldRegister.GetItem(teamSide + fieldName).Get<Field>().GetPosition();
     }
 
     public void ResetPlayer()
     {
-        bool away = id.StartsWith("Away");
+        bool isAway = id.StartsWith("Away");
+        string teamSide = isAway ? "Away" : "Home";
+        float facingAngle = isAway ? 270f : 90f;
 
-        Controller.Face(Quaternion.Euler(0f, away ? 270f : 90f, 0f));
-        transform.localPosition = SpawnPosition(away ? "Away" : "Home");
+        avatar.Turn(Quaternion.Euler(0f, facingAngle, 0f));
+        transform.localPosition = SpawnPosition(teamSide);
     }
 
-    void Update() => Controller.Follow();
+   
+
+    public Vector3 GetPosition() => transform.position;
 }

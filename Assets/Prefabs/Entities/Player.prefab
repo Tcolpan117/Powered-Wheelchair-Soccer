@@ -382,10 +382,10 @@ MonoBehaviour:
   id: HomeGoaly
   team: 0
   role: 2
-  Controller:
-    rig: {fileID: 0}
-    offset: {x: 0, y: -0.3, z: -0.25}
-    rb: {fileID: 0}
+  avatar:
+    xrRig: {fileID: 0}
+    body: {fileID: 4725581401336199127}
+    rigOffset: {x: 0, y: -0.3, z: -0.25}
 --- !u!1 &3634505859865531507
 GameObject:
   m_ObjectHideFlags: 0

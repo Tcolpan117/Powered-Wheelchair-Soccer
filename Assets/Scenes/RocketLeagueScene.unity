@@ -837,20 +837,6 @@ Transform:
   - {fileID: 832575519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &735728641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7977036277447768062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b457ca98b0be1994f9043fb615f53c13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  id: 
-  team: 0
 --- !u!114 &793797902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1178791450436251564, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -1278,11 +1264,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 1824313953553708632}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1673124940 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 4725581401336199127, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
-  m_PrefabInstance: {fileID: 1824313953553708632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1811900770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,7 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArcMoveProvider
   m_Mediator: {fileID: 2107839555}
   m_TransformationPriority: 0
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 6
   m_InAirControlModifier: 0.5
   m_EnableStrafe: 0
   m_EnableFly: 0
@@ -1334,7 +1315,7 @@ MonoBehaviour:
     m_ManualValue: {x: 0, y: 0}
   m_UseGravity: 1
   rig: {fileID: 1287378864}
-  turnSpeed: 90
+  turnSpeed: 180
 --- !u!1001 &1819772688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1744,11 +1725,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 1456329543}
     m_Modifications:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
-      propertyPath: Controller.rb
-      value: 
-      objectReference: {fileID: 1673124940}
-    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
-      propertyPath: Controller.rig
+      propertyPath: avatar.xrRig
       value: 
       objectReference: {fileID: 793797902}
     - target: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
@@ -11868,10 +11845,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6295364502688515591, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 735728641}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
 --- !u!1001 &7132689205773288207
 PrefabInstance:
@@ -11974,11 +11948,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
---- !u!1 &7977036277447768062 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6295364502688515591, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
-  m_PrefabInstance: {fileID: 4173007902341591545}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
