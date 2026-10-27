@@ -1,7 +1,7 @@
 public enum Role
 {
-    LeftField = 0,
-    RightField = 1,
+    LeftFielder = 0,
+    RightFielder = 1,
     Goaly = 2
     
 }

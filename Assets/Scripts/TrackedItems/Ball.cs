@@ -3,10 +3,10 @@ using UnityEngine;
 public class Ball : MonoBehaviour, IRegistryProvider
 {
     public RegistryItem item {get; private set;}
+    [SerializeField] private Prop prop;
 
-    [SerializeField] private string id;
-
-    private void ConstructRegistryItem() => item = new RegistryItem(id, gameObject);
+    private string ConstructId(){return prop.ToString();}  
+    private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
 
 
     void Awake() => ConstructRegistryItem();

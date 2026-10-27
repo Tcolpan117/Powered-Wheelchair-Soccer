@@ -716,6 +716,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: zone
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
       value: 
       objectReference: {fileID: 1474285004}
@@ -929,6 +933,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: zone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
       value: 
       objectReference: {fileID: 2109410927}
@@ -1134,6 +1142,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: role
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: zone
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
@@ -1724,6 +1736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1456329543}
     m_Modifications:
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: zone
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: avatar.xrRig
       value: 
@@ -2321,6 +2337,10 @@ PrefabInstance:
     - target: {fileID: 582977372364447602, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: team
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 582977372364447602, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      propertyPath: zone
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 587774255273198683, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalScale.x
@@ -3282,6 +3302,10 @@ PrefabInstance:
       propertyPath: id
       value: HomeRightField
       objectReference: {fileID: 0}
+    - target: {fileID: 1502683637812749306, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      propertyPath: zone
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1576343611463725341, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -3297,6 +3321,10 @@ PrefabInstance:
     - target: {fileID: 1576343611463725341, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582391753998629905, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      propertyPath: zone
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1584161713993979211, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalScale.x
@@ -5981,6 +6009,10 @@ PrefabInstance:
     - target: {fileID: 3813860050708262783, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820434716756328327, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      propertyPath: zone
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3852184704669739810, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalScale.x
@@ -10390,6 +10422,10 @@ PrefabInstance:
       propertyPath: team
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7806937372791997817, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      propertyPath: zone
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7809941665006702195, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -11433,6 +11469,10 @@ PrefabInstance:
     - target: {fileID: 8872997180575180569, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: id
       value: HomePen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872997180575180569, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      propertyPath: zone
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8879452789672208349, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_LocalScale.x

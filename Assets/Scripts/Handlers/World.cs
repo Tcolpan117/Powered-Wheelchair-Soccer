@@ -34,8 +34,6 @@ public class World : MonoBehaviour
         WorldRegister.GetItem("HomeRightFielder").Get<Player>().ResetPlayer();
         WorldRegister.GetItem("HomeGoaly").Get<Player>().ResetPlayer();
         WorldRegister.GetItem("AwayGoaly").Get<Player>().ResetPlayer();
-
-
     }
 
     private void ScoreGoal(RegistryItem trigger, RegistryItem cause)

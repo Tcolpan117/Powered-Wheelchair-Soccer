@@ -58,12 +58,13 @@ public class Player : MonoBehaviour, IRegistryProvider
 {
     public RegistryItem item { get; private set; }
 
-    [SerializeField] private string id;
     [SerializeField] private Team team;
     [SerializeField] private Role role;
+    [SerializeField] private Zone zone;
     [SerializeField] private Controller avatar;
 
-    private void ConstructRegistryItem() => item = new RegistryItem(id, gameObject);
+    private string ConstructId(){return team.ToString() + role.ToString();}  
+    private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
 
     void Awake()
     {
@@ -76,27 +77,22 @@ public class Player : MonoBehaviour, IRegistryProvider
     void OnDestroy() => WorldRegister.UnRegister(item);
     
 
-    private Vector3 SpawnPosition(string teamSide)
+    private void ResetPosition()
     {
-        bool isGoalie = id.EndsWith("Goaly");
-        if (isGoalie)
-            return WorldRegister.GetItem(teamSide + "Pen").Get<Pen>().GetPosition();
-
-        string fieldName = id.Contains("Left") ? "LeftField" : "RightField";
-        return WorldRegister.GetItem(teamSide + fieldName).Get<Field>().GetPosition();
+        if (role == Role.Goaly){
+            transform.localPosition = WorldRegister.GetItem(team.ToString() + zone.ToString()).Get<Pen>().GetPosition();
+        }else{
+            transform.localPosition = WorldRegister.GetItem(team.ToString() + zone.ToString()).Get<Field>().GetPosition();
+        }
     }
 
     public void ResetPlayer()
     {
-        bool isAway = id.StartsWith("Away");
-        string teamSide = isAway ? "Away" : "Home";
-        float facingAngle = isAway ? 270f : 90f;
-
+        float facingAngle = (team == Team.Away) ? 270f : 90f;
         avatar.Turn(Quaternion.Euler(0f, facingAngle, 0f));
-        transform.localPosition = SpawnPosition(teamSide);
+        ResetPosition();
     }
 
-   
 
     public Vector3 GetPosition() => transform.position;
 }
