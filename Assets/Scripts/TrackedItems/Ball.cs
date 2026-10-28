@@ -4,6 +4,7 @@ public class Ball : MonoBehaviour, IRegistryProvider
 {
     public RegistryItem item {get; private set;}
     [SerializeField] private Prop prop;
+    [SerializeField] private Zone zone;
 
     private string ConstructId(){return prop.ToString();}  
     private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
@@ -22,6 +23,6 @@ public class Ball : MonoBehaviour, IRegistryProvider
         rb.linearVelocity = Vector3.zero; 
         rb.angularVelocity = Vector3.zero;
 
-        transform.localPosition = Vector3.zero + Vector3.up;
+        transform.localPosition = WorldRegister.GetItem(zone.ToString()).Get<Center>().GetPosition();
     }
 }
