@@ -351,7 +351,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941320174885482939}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -382,41 +382,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d8a98b151803c4cbd2c6bafbd2d8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  id: HomeLeftFielder
+  id: HomeGoaly
   team: 0
   role: 2
---- !u!114 &6310679967113239626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941320174885482939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bc7c1d84dd3f46458fe0b453a4d272f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WheelchairMotor
-  stats: {fileID: 11400000, guid: 8a6c62fb0d6eef549a99e54095d884c2, type: 2}
-  lockTipping: 1
-  bodyCollider: {fileID: 0}
-  groundCheckDistance: 0.1
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &2759428061401717137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941320174885482939}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45b554c136ed7a84e8864bf616c1b70c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerWheelchairDriver
-  driveAction: {fileID: 1796968051169065754, guid: 6fd837e07d2abb447bf75232033590b0, type: 3}
+  avatar:
+    xrRig: {fileID: 0}
+    body: {fileID: 4725581401336199127}
+    rigOffset: {x: 0, y: -0.3, z: -0.25}
 --- !u!1 &3634505859865531507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,7 +1968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4321abb614b926444beddc825f4383a4, type: 3}
       propertyPath: m_Name
-      value: Fixed VR WhS Game Player Model Colored Mk2
+      value: Dummy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

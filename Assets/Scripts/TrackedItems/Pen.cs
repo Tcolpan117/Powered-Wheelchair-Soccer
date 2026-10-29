@@ -4,12 +4,11 @@ public class Pen : MonoBehaviour
 {
     public RegistryItem item {get; private set;}
 
-
-    [SerializeField] private string id;
     [SerializeField] private Team team;
+    [SerializeField] private Zone zone;
 
-
-    private void ConstructRegistryItem() => item = new RegistryItem(id, gameObject);
+    private string ConstructId(){return team.ToString() + zone.ToString();}  
+    private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
     void Awake() => ConstructRegistryItem();
     void Start() => WorldRegister.Register(item);
     void OnDestroy() => WorldRegister.UnRegister(item);

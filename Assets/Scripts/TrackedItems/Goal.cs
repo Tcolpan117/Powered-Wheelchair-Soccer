@@ -5,13 +5,13 @@ public class Goal : MonoBehaviour, IRegistryProvider
 {
     public RegistryItem item {get; private set;}
 
-    [SerializeField] private string id;
     [SerializeField] private Team team;
+    [SerializeField] private Zone zone;
 
     public static event Action<string, string> TriggerEvent;
 
-
-    private void ConstructRegistryItem() => item = new RegistryItem(id, gameObject);
+    private string ConstructId(){return team.ToString() + zone.ToString();}  
+    private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
 
     void Awake() => ConstructRegistryItem();
     void Start() => WorldRegister.Register(item);
@@ -21,7 +21,7 @@ public class Goal : MonoBehaviour, IRegistryProvider
     {  
         var cause = other.GetComponentInParent<IRegistryProvider>();
         if (cause == null) return;
-        TriggerEvent?.Invoke(id, cause.item.id);
+        TriggerEvent?.Invoke(ConstructId(), cause.item.id);
     }
 
 
