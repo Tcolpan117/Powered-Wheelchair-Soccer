@@ -3,10 +3,11 @@ using UnityEngine;
 public class Ball : MonoBehaviour, IRegistryProvider
 {
     public RegistryItem item {get; private set;}
+    [SerializeField] private Prop prop;
+    [SerializeField] private Zone zone;
 
-    [SerializeField] private string id;
-
-    private void ConstructRegistryItem() => item = new RegistryItem(id, gameObject);
+    private string ConstructId(){return prop.ToString();}  
+    private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
 
 
     void Awake() => ConstructRegistryItem();
@@ -22,6 +23,6 @@ public class Ball : MonoBehaviour, IRegistryProvider
         rb.linearVelocity = Vector3.zero; 
         rb.angularVelocity = Vector3.zero;
 
-        transform.localPosition = Vector3.zero + Vector3.up;
+        transform.localPosition = WorldRegister.GetItem(zone.ToString()).Get<Center>().GetPosition();
     }
 }
