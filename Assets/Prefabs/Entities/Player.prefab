@@ -294,8 +294,6 @@ GameObject:
   - component: {fileID: 8026614708821792563}
   - component: {fileID: 4725581401336199127}
   - component: {fileID: 208130455761708267}
-  - component: {fileID: 6310679967113239626}
-  - component: {fileID: 2759428061401717137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -382,9 +380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d8a98b151803c4cbd2c6bafbd2d8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  id: HomeGoaly
   team: 0
   role: 2
+  zone: 2
   avatar:
     xrRig: {fileID: 0}
     body: {fileID: 4725581401336199127}

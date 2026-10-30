@@ -12,18 +12,16 @@ public class PlayerStateMachine : MonoBehaviour
     public IPlayerState CurrentState { get; private set; }
     private PlayerNavigation navigation;
     private PlayerAwareness awareness;
-    private PlayerWheelchairDriver human;
     private Vector3 initialPosition;
     private IPlayerState humanState, holdState, chaseState, returnState, yieldState;
     private bool wasHuman;
     private Vector3 Home => homePosition != null ? homePosition.position : initialPosition;
-    private bool HumanControlled => human != null && human.isActiveAndEnabled;
+    private bool HumanControlled => GetComponent<Player>().IsPossessed();
 
     private void Awake()
     {
         navigation = GetComponent<PlayerNavigation>();
         awareness = GetComponent<PlayerAwareness>();
-        human = GetComponent<PlayerWheelchairDriver>();
         humanState = new ActionState("HumanControlled", () => { });
         holdState = new ActionState("HoldPosition", navigation.Stop);
         chaseState = new ActionState("ChaseBall", () => navigation.MoveTo(awareness.Ball.GetPosition()));

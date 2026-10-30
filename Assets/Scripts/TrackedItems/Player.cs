@@ -66,6 +66,10 @@ public class Player : MonoBehaviour, IRegistryProvider
     private string ConstructId(){return team.ToString() + role.ToString();}  
     private void ConstructRegistryItem() => item = new RegistryItem(ConstructId(), gameObject);
 
+    public bool IsPossessed()
+    {
+        return avatar.xrRig != null;
+    }
     void Awake()
     {
         ConstructRegistryItem();
