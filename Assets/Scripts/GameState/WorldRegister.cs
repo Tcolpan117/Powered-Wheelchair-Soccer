@@ -23,5 +23,6 @@ public static class WorldRegister
     public static void Register(RegistryItem item) => _registry[item.id] = item;
     public static void UnRegister(RegistryItem item) => _registry.Remove(item.id);
     public static RegistryItem GetItem(string id) => _registry[id];
+    public static bool TryGetItem(string id, out RegistryItem item) => _registry.TryGetValue(id, out item);
 
 }
