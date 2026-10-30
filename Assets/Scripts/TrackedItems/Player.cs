@@ -57,7 +57,7 @@ public class Controller
 public class Player : MonoBehaviour, IRegistryProvider
 {
     public RegistryItem item { get; private set; }
-
+    
     [SerializeField] private Team team;
     [SerializeField] private Role role;
     [SerializeField] private Zone zone;

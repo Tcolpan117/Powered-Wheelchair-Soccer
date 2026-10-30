@@ -19,9 +19,8 @@ public class Goal : MonoBehaviour, IRegistryProvider
 
     private void OnTriggerEnter(Collider other)
     {  
-        var cause = other.GetComponentInParent<IRegistryProvider>();
-        if (cause == null) return;
-        TriggerEvent?.Invoke(ConstructId(), cause.item.id);
+        string causeId = other.GetComponentInParent<IRegistryProvider>().item.id;
+        TriggerEvent?.Invoke(ConstructId(), causeId);
     }
 
 
