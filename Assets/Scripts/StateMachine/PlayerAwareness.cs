@@ -16,6 +16,7 @@ public class PlayerAwareness : MonoBehaviour
 
     private const float ScanInterval = 0.1f;
     private const float ForwardConeCosine = 0.5f; // 60 degrees to either side.
+    private const float TurnPenaltyMeters = 3f;
     private readonly List<Player> nearbyPlayers = new();
     private Player self;
     private SphereCollider spaceBubble;
@@ -119,21 +120,33 @@ public class PlayerAwareness : MonoBehaviour
         return pursuers.TryGetValue(team, out var player) && Eligible(player, team) ? player : null;
     }
 
+    private static float PursuitCost(Player candidate, Vector3 ball)
+    {
+        Vector3 to = ball - candidate.GetPosition();
+        to.y = 0f;
+        float distance = to.magnitude;
+        if (distance < 0.01f) return 0f;
+
+        Vector3 forward = candidate.transform.forward;
+        forward.y = 0f;
+        return distance + Vector3.Angle(forward, to) / 180f * TurnPenaltyMeters;
+    }
+
     private void ChoosePursuer(Team team)
     {
         Vector3 ball = Ball.GetPosition();
         Player nearest = null;
-        float nearestDistance = float.PositiveInfinity;
+        float bestCost = float.PositiveInfinity;
         foreach (Player candidate in GetScenePlayers())
         {
             if (!Eligible(candidate, team)) continue;
-            float distance = PlayerNavigation.Distance(candidate.GetPosition(), ball);
-            if (distance < nearestDistance
-                || (Mathf.Approximately(distance, nearestDistance)
+            float cost = PursuitCost(candidate, ball);
+            if (cost < bestCost
+                || (Mathf.Approximately(cost, bestCost)
                     && nearest != null && (int)candidate.Role < (int)nearest.Role))
             {
                 nearest = candidate;
-                nearestDistance = distance;
+                bestCost = cost;
             }
         }
 
@@ -141,7 +154,7 @@ public class PlayerAwareness : MonoBehaviour
         if (Eligible(current, team))
         {
             if (assignmentUntil.TryGetValue(team, out float until) && Time.time < until) return;
-            if (PlayerNavigation.Distance(current.GetPosition(), ball) <= nearestDistance + 0.75f) return;
+            if (PursuitCost(current, ball) <= bestCost + 0.75f) return;
         }
 
         pursuers[team] = nearest;

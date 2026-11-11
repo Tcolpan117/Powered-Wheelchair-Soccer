@@ -14,6 +14,8 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField, Min(0f)] private float penMargin = 1f;
     [SerializeField, Range(0.1f, 0.8f)] private float defensiveDepth = 0.4f;
     [SerializeField] private string currentState;
+    [SerializeField, Min(0.1f)] private float separationRadius = 3f;   // keep <= PlayerAwareness bubble radius
+    [SerializeField, Min(0f)] private float separationWeight = 2f;
 
     public State CurrentState { get; private set; } = State.Disabled;
     public bool IsYielding { get; private set; }
@@ -101,7 +103,7 @@ public class PlayerStateMachine : MonoBehaviour
         }
         else
         {
-            Target = DefensiveTarget(ball.GetPosition());
+            Target = DefensiveTarget(ball.GetPosition()) + SeparationOffset();
             next = State.Defend;
         }
 
@@ -138,6 +140,21 @@ public class PlayerStateMachine : MonoBehaviour
         target.z = Mathf.Lerp(Home.z, ball.z, 0.25f);
         target.y = Home.y;
         return target;
+    }
+
+    private Vector3 SeparationOffset()
+    {
+        Vector3 push = Vector3.zero;
+        foreach (Player other in awareness.NearbyPlayers)
+        {
+            if (other == null || other.Team != player.Team) continue;
+            Vector3 away = player.GetPosition() - other.GetPosition();
+            away.y = 0f;
+            float d = away.magnitude;
+            if (d < 0.01f || d >= separationRadius) continue;
+            push += away / d * (1f - d / separationRadius);
+        }
+        return push * separationWeight;
     }
 
     private bool TryGetPen(out Bounds bounds)

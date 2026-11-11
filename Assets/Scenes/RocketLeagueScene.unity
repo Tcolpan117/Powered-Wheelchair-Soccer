@@ -165,6 +165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e20674043fd1f4e9021961f8f7005c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Governer
+--- !u!4 &176817218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3341280985392267348, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &274384518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
@@ -245,6 +250,10 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: zone
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: driveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -1769,6 +1778,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!4 &424549493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9000175926754521221, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &474825991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1819,7 +1833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: driveSpeed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -2883,6 +2897,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 474825991}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &586805539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4655803916496228948, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &693426207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -2920,6 +2939,11 @@ Transform:
   - {fileID: 832575519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &738762188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185654426656666927, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &793797902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1178791450436251564, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -3041,7 +3065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: driveSpeed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -4101,6 +4125,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 1015450456}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1064189461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4455200033234026513, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1156750163 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1748222016861356527, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -4209,12 +4238,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  homePosition: {fileID: 0}
+  homePosition: {fileID: 1064189461}
   playerStopDistance: 1.5
   goalkeeperSpeed: 0.4
   penMargin: 1
   defensiveDepth: 0.4
   currentState: 
+  separationRadius: 3
+  separationWeight: 2
 --- !u!114 &1474285006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4323,6 +4354,10 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: driveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: avatar.xrRig
@@ -5674,6 +5709,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f365cf844c03449bc8973eead2c3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1951634238 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4485920235117568314, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2036086712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
@@ -5696,12 +5736,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  homePosition: {fileID: 0}
+  homePosition: {fileID: 738762188}
   playerStopDistance: 1.5
   goalkeeperSpeed: 0.4
   penMargin: 1
   defensiveDepth: 0.4
   currentState: 
+  separationRadius: 3
+  separationWeight: 2
 --- !u!114 &2036086716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5781,12 +5823,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  homePosition: {fileID: 0}
+  homePosition: {fileID: 424549493}
   playerStopDistance: 1.5
   goalkeeperSpeed: 0.4
   penMargin: 1
   defensiveDepth: 0.4
   currentState: 
+  separationRadius: 3
+  separationWeight: 2
 --- !u!114 &2109410929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5860,12 +5904,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  homePosition: {fileID: 0}
+  homePosition: {fileID: 176817218}
   playerStopDistance: 1.5
   goalkeeperSpeed: 0.4
   penMargin: 1
   defensiveDepth: 0.4
   currentState: 
+  separationRadius: 3
+  separationWeight: 2
 --- !u!114 &2132198992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6135,6 +6181,10 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: zone
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: driveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: avatar.xrRig
@@ -7200,12 +7250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  homePosition: {fileID: 0}
+  homePosition: {fileID: 586805539}
   playerStopDistance: 1.5
   goalkeeperSpeed: 0.4
   penMargin: 1
   defensiveDepth: 0.4
   currentState: 
+  separationRadius: 3
+  separationWeight: 2
 --- !u!114 &1824313953553708636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7290,7 +7342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: driveSpeed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -8362,12 +8414,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  homePosition: {fileID: 0}
+  homePosition: {fileID: 1951634238}
   playerStopDistance: 1.5
   goalkeeperSpeed: 0.4
   penMargin: 1
   defensiveDepth: 0.4
   currentState: 
+  separationRadius: 3
+  separationWeight: 2
 --- !u!114 &7132689205773288210
 MonoBehaviour:
   m_ObjectHideFlags: 0
