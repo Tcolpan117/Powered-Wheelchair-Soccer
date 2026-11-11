@@ -179,7 +179,6 @@ public class PlayerStateMachine : MonoBehaviour
         player.StopDriving();
     }
 
-    //Sets the state for statemachine, test git push
     private void SetState(State next)
     {
         if (CurrentState != next)
