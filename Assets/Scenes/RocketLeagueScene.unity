@@ -1261,8 +1261,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132198994}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132198993}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132198992}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132198991}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+--- !u!1 &328408036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+  m_PrefabInstance: {fileID: 328408035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &364116879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +1816,10 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: zone
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: driveSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -2843,8 +2864,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474285008}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474285007}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474285006}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474285005}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+--- !u!1 &474825992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+  m_PrefabInstance: {fileID: 474825991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &693426207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -3000,6 +3038,10 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: zone
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: driveSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -4040,8 +4082,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109410931}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109410930}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109410929}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109410928}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+--- !u!1 &1015450457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+  m_PrefabInstance: {fileID: 1015450456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1156750163 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1748222016861356527, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -4138,6 +4197,75 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4725581401336199127, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 474825991}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1474285005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474825992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  homePosition: {fileID: 0}
+  playerStopDistance: 1.5
+  goalkeeperSpeed: 0.4
+  penMargin: 1
+  defensiveDepth: 0.4
+  currentState: 
+--- !u!114 &1474285006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474825992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
+  radius: 4
+  pen: {fileID: 0}
+  ballId: Ball
+--- !u!114 &1474285007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474825992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
+  sampleDistance: 2
+  maxHorizontalSnap: 0.15
+--- !u!195 &1474285008
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474825992}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.8
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &1548808276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
@@ -4196,6 +4324,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: avatar.xrRig
+      value: 
+      objectReference: {fileID: 793797902}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
       value: 
@@ -5235,8 +5367,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036086718}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036086717}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036086716}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036086715}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+--- !u!1 &1601445734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+  m_PrefabInstance: {fileID: 1601445733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1614759059 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 742272467831425975, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -5535,6 +5684,75 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4725581401336199127, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 1601445733}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2036086715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601445734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  homePosition: {fileID: 0}
+  playerStopDistance: 1.5
+  goalkeeperSpeed: 0.4
+  penMargin: 1
+  defensiveDepth: 0.4
+  currentState: 
+--- !u!114 &2036086716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601445734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
+  radius: 4
+  pen: {fileID: 0}
+  ballId: Ball
+--- !u!114 &2036086717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601445734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
+  sampleDistance: 2
+  maxHorizontalSnap: 0.15
+--- !u!195 &2036086718
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601445734}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.8
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &2107839555 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6640002710935096923, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -5551,6 +5769,75 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4725581401336199127, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 1015450456}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2109410928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015450457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  homePosition: {fileID: 0}
+  playerStopDistance: 1.5
+  goalkeeperSpeed: 0.4
+  penMargin: 1
+  defensiveDepth: 0.4
+  currentState: 
+--- !u!114 &2109410929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015450457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
+  radius: 4
+  pen: {fileID: 0}
+  ballId: Ball
+--- !u!114 &2109410930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015450457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
+  sampleDistance: 2
+  maxHorizontalSnap: 0.15
+--- !u!195 &2109410931
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015450457}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.8
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &2132198988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 286210374821777562, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
@@ -5561,6 +5848,75 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4725581401336199127, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
   m_PrefabInstance: {fileID: 328408035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132198991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328408036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  homePosition: {fileID: 0}
+  playerStopDistance: 1.5
+  goalkeeperSpeed: 0.4
+  penMargin: 1
+  defensiveDepth: 0.4
+  currentState: 
+--- !u!114 &2132198992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328408036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
+  radius: 4
+  pen: {fileID: 0}
+  ballId: Ball
+--- !u!114 &2132198993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328408036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
+  sampleDistance: 2
+  maxHorizontalSnap: 0.15
+--- !u!195 &2132198994
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328408036}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.8
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &725857740017323376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3400643666298766622, guid: 1c462f6bf27d5b34f99514df31feb080, type: 3}
@@ -5783,7 +6139,7 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: avatar.xrRig
       value: 
-      objectReference: {fileID: 793797902}
+      objectReference: {fileID: 0}
     - target: {fileID: 237988643945345708, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -6791,8 +7147,94 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824313953553708637}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824313953553708636}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824313953553708635}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824313953553708634}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+--- !u!1 &1824313953553708633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+  m_PrefabInstance: {fileID: 1824313953553708632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &1824313953553708634
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824313953553708633}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.8
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1824313953553708635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824313953553708633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  homePosition: {fileID: 0}
+  playerStopDistance: 1.5
+  goalkeeperSpeed: 0.4
+  penMargin: 1
+  defensiveDepth: 0.4
+  currentState: 
+--- !u!114 &1824313953553708636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824313953553708633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
+  radius: 4
+  pen: {fileID: 0}
+  ballId: Ball
+--- !u!114 &1824313953553708637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824313953553708633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
+  sampleDistance: 2
+  maxHorizontalSnap: 0.15
 --- !u!4 &2703523448461912935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6112195796413455436, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
@@ -6845,6 +7287,10 @@ PrefabInstance:
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: zone
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: driveSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       propertyPath: Controller.rb
@@ -7885,8 +8331,94 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7132689205773288212}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7132689205773288211}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7132689205773288210}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7132689205773288209}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+--- !u!1 &7132689205773288208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+  m_PrefabInstance: {fileID: 7132689205773288207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7132689205773288209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132689205773288208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96f664ab6d81141bb16824aef72e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  homePosition: {fileID: 0}
+  playerStopDistance: 1.5
+  goalkeeperSpeed: 0.4
+  penMargin: 1
+  defensiveDepth: 0.4
+  currentState: 
+--- !u!114 &7132689205773288210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132689205773288208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
+  radius: 4
+  pen: {fileID: 0}
+  ballId: Ball
+--- !u!114 &7132689205773288211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132689205773288208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
+  sampleDistance: 2
+  maxHorizontalSnap: 0.15
+--- !u!195 &7132689205773288212
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132689205773288208}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.8
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &7296666569642989360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7895,10 +8427,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1272011158}
     m_Modifications:
-    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
-      propertyPath: team
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2009756079880774, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4
@@ -18571,11 +19099,55 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 208130455761708267, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      propertyPath: team
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8373510582553330708, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7296666569642989362}
   m_SourcePrefab: {fileID: 100100000, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+--- !u!1 &7296666569642989361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8373510582553330708, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
+  m_PrefabInstance: {fileID: 7296666569642989360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7296666569642989362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296666569642989361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 1
+  m_VoxelSize: 0.1
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 85271543a9761374a8fc66b5436a1a5e, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
