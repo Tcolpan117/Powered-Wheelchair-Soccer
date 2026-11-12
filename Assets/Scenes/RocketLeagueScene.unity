@@ -4239,13 +4239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   homePosition: {fileID: 1064189461}
-  playerStopDistance: 1.5
-  goalkeeperSpeed: 0.4
-  penMargin: 1
-  defensiveDepth: 0.4
-  currentState: 
-  separationRadius: 3
-  separationWeight: 2
+  state: 0
 --- !u!114 &1474285006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4258,9 +4252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
-  radius: 4
-  pen: {fileID: 0}
-  ballId: Ball
 --- !u!114 &1474285007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4273,8 +4264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
-  sampleDistance: 2
-  maxHorizontalSnap: 0.15
 --- !u!195 &1474285008
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5737,13 +5726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   homePosition: {fileID: 738762188}
-  playerStopDistance: 1.5
-  goalkeeperSpeed: 0.4
-  penMargin: 1
-  defensiveDepth: 0.4
-  currentState: 
-  separationRadius: 3
-  separationWeight: 2
+  state: 0
 --- !u!114 &2036086716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5756,9 +5739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
-  radius: 4
-  pen: {fileID: 0}
-  ballId: Ball
 --- !u!114 &2036086717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5771,8 +5751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
-  sampleDistance: 2
-  maxHorizontalSnap: 0.15
 --- !u!195 &2036086718
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5824,13 +5802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   homePosition: {fileID: 424549493}
-  playerStopDistance: 1.5
-  goalkeeperSpeed: 0.4
-  penMargin: 1
-  defensiveDepth: 0.4
-  currentState: 
-  separationRadius: 3
-  separationWeight: 2
+  state: 0
 --- !u!114 &2109410929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5843,9 +5815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
-  radius: 4
-  pen: {fileID: 0}
-  ballId: Ball
 --- !u!114 &2109410930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5858,8 +5827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
-  sampleDistance: 2
-  maxHorizontalSnap: 0.15
 --- !u!195 &2109410931
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5905,13 +5872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   homePosition: {fileID: 176817218}
-  playerStopDistance: 1.5
-  goalkeeperSpeed: 0.4
-  penMargin: 1
-  defensiveDepth: 0.4
-  currentState: 
-  separationRadius: 3
-  separationWeight: 2
+  state: 0
 --- !u!114 &2132198992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5924,9 +5885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
-  radius: 4
-  pen: {fileID: 0}
-  ballId: Ball
 --- !u!114 &2132198993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,8 +5897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
-  sampleDistance: 2
-  maxHorizontalSnap: 0.15
 --- !u!195 &2132198994
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7200,6 +7156,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1824313953553708634}
+    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1824313953553708637}
     - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       insertIndex: -1
@@ -7207,9 +7166,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1824313953553708635}
-    - targetCorrespondingSourceObject: {fileID: 2941320174885482939, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1824313953553708634}
   m_SourcePrefab: {fileID: 100100000, guid: 1d0edea4641ec08498a230a079049eed, type: 3}
 --- !u!1 &1824313953553708633 stripped
 GameObject:
@@ -7223,7 +7179,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824313953553708633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -7251,13 +7207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   homePosition: {fileID: 586805539}
-  playerStopDistance: 1.5
-  goalkeeperSpeed: 0.4
-  penMargin: 1
-  defensiveDepth: 0.4
-  currentState: 
-  separationRadius: 3
-  separationWeight: 2
+  state: 0
 --- !u!114 &1824313953553708636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7270,9 +7220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
-  radius: 4
-  pen: {fileID: 0}
-  ballId: Ball
 --- !u!114 &1824313953553708637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7285,8 +7232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
-  sampleDistance: 2
-  maxHorizontalSnap: 0.15
 --- !u!4 &2703523448461912935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6112195796413455436, guid: cbace7065b3c1004c84ac0925eebbe54, type: 3}
@@ -8415,13 +8360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   homePosition: {fileID: 1951634238}
-  playerStopDistance: 1.5
-  goalkeeperSpeed: 0.4
-  penMargin: 1
-  defensiveDepth: 0.4
-  currentState: 
-  separationRadius: 3
-  separationWeight: 2
+  state: 0
 --- !u!114 &7132689205773288210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8434,9 +8373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dae0493c8ea534a9daa52690f81e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwareness
-  radius: 4
-  pen: {fileID: 0}
-  ballId: Ball
 --- !u!114 &7132689205773288211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8449,8 +8385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89562981aea1a04896ffb637ac413f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerNavigation
-  sampleDistance: 2
-  maxHorizontalSnap: 0.15
 --- !u!195 &7132689205773288212
 NavMeshAgent:
   m_ObjectHideFlags: 0

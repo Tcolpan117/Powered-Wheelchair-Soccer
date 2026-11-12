@@ -1,0 +1,332 @@
+{
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/DemoSceneAssets/Scripts/IncrementUIText.cs": {
+    "mtime": 1788395053.4126313,
+    "seen": 1794448739.8590815,
+    "ast_hash": "7da6b9c903b7417bb2f1e2b0fea2e4bb",
+    "semantic_hash": "7da6b9c903b7417bb2f1e2b0fea2e4bb"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/DemoSceneAssets/Scripts/MultiAnchorTeleportReticle.cs": {
+    "mtime": 1788395053.4126313,
+    "seen": 1794448739.8590875,
+    "ast_hash": "7d50ca1a2a8951e6adff01d5df532910",
+    "semantic_hash": "7d50ca1a2a8951e6adff01d5df532910"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Editor/Scripts/StarterAssetsSampleProjectValidation.cs": {
+    "mtime": 1788395053.4465377,
+    "seen": 1794448739.8590899,
+    "ast_hash": "f6ef8923ace7fa4b1a1aed697607775a",
+    "semantic_hash": "f6ef8923ace7fa4b1a1aed697607775a"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/ClimbTeleportDestinationIndicator.cs": {
+    "mtime": 1788395053.4794273,
+    "seen": 1794448739.8590915,
+    "ast_hash": "72b2954baa7f2ef2a4928da4a4259e5c",
+    "semantic_hash": "72b2954baa7f2ef2a4928da4a4259e5c"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/ControllerAnimator.cs": {
+    "mtime": 1788395053.4799445,
+    "seen": 1794448739.8590927,
+    "ast_hash": "3afd780a971b8ca6119b0786b397ec5b",
+    "semantic_hash": "3afd780a971b8ca6119b0786b397ec5b"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/ControllerInputActionManager.cs": {
+    "mtime": 1788395053.4799445,
+    "seen": 1794448739.8590937,
+    "ast_hash": "e787fe097979c3154fef65b8c09f7bb9",
+    "semantic_hash": "e787fe097979c3154fef65b8c09f7bb9"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/DestroySelf.cs": {
+    "mtime": 1788395053.481456,
+    "seen": 1794448739.859095,
+    "ast_hash": "2021d018960c7231a023c61a064660fc",
+    "semantic_hash": "2021d018960c7231a023c61a064660fc"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/DynamicMoveProvider.cs": {
+    "mtime": 1788395053.481456,
+    "seen": 1794448739.859096,
+    "ast_hash": "d35ada8265ebcd71365625f049f8c5c8",
+    "semantic_hash": "d35ada8265ebcd71365625f049f8c5c8"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/GazeInputManager.cs": {
+    "mtime": 1788395053.481456,
+    "seen": 1794448739.859097,
+    "ast_hash": "ac8996f435b5749187b96a1562387428",
+    "semantic_hash": "ac8996f435b5749187b96a1562387428"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/MaterialPipelineHandler.cs": {
+    "mtime": 1788395053.481456,
+    "seen": 1794448739.8590982,
+    "ast_hash": "b1241cc41ea94b7a7e9f6771f531e452",
+    "semantic_hash": "b1241cc41ea94b7a7e9f6771f531e452"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/ObjectSpawner.cs": {
+    "mtime": 1788395053.4829679,
+    "seen": 1794448739.859099,
+    "ast_hash": "ee86695573807872244a583584ccdf07",
+    "semantic_hash": "ee86695573807872244a583584ccdf07"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/PermissionsManager.cs": {
+    "mtime": 1788395053.4829679,
+    "seen": 1794448739.8591003,
+    "ast_hash": "60e36fed527079c023f6b9618e2f5174",
+    "semantic_hash": "60e36fed527079c023f6b9618e2f5174"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/PlatformUnderstanding.cs": {
+    "mtime": 1788395053.4844842,
+    "seen": 1794448739.8591013,
+    "ast_hash": "6ee58b01b24fdee873b18f0b6528e0d4",
+    "semantic_hash": "6ee58b01b24fdee873b18f0b6528e0d4"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/RotationAxisLockGrabTransformer.cs": {
+    "mtime": 1788395053.4844842,
+    "seen": 1794448739.8591022,
+    "ast_hash": "53dd1c6001335e020315ff9386970cb3",
+    "semantic_hash": "53dd1c6001335e020315ff9386970cb3"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/TeleportVolumeAnchorAffordanceStateLink.cs": {
+    "mtime": 1788395053.4844842,
+    "seen": 1794448739.8591034,
+    "ast_hash": "1b0c86635d2226c4672cf59e9b0d20cf",
+    "semantic_hash": "1b0c86635d2226c4672cf59e9b0d20cf"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/ToggleColorToggler.cs": {
+    "mtime": 1788395053.4859984,
+    "seen": 1794448739.8591044,
+    "ast_hash": "83198c43eedb7574322e7c93c905bbfd",
+    "semantic_hash": "83198c43eedb7574322e7c93c905bbfd"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/ToggleComponentZone.cs": {
+    "mtime": 1788395053.4870028,
+    "seen": 1794448739.8591053,
+    "ast_hash": "59f00b0f461d483a2c521e3bf3353f95",
+    "semantic_hash": "59f00b0f461d483a2c521e3bf3353f95"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/Scripts/XRPokeFollowAffordance.cs": {
+    "mtime": 1788395053.4875073,
+    "seen": 1794448739.8591063,
+    "ast_hash": "fd6077ae9b8d19c6d0e020b4c6fee870",
+    "semantic_hash": "fd6077ae9b8d19c6d0e020b4c6fee870"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs": {
+    "mtime": 1788395053.5052252,
+    "seen": 1794448739.8591073,
+    "ast_hash": "5879da168adb3db02e1836c2be98020c",
+    "semantic_hash": "5879da168adb3db02e1836c2be98020c"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs": {
+    "mtime": 1788395053.5067377,
+    "seen": 1794448739.8591084,
+    "ast_hash": "fc5d893d6835eb423bbb434178dad5a1",
+    "semantic_hash": "fc5d893d6835eb423bbb434178dad5a1"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs": {
+    "mtime": 1788395053.508262,
+    "seen": 1794448739.8591094,
+    "ast_hash": "d68ce803383e8bb5f73c0a0891356dbf",
+    "semantic_hash": "d68ce803383e8bb5f73c0a0891356dbf"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/XR Interaction Simulator/Editor/XRInteractionSimulatorProjectValidation.cs": {
+    "mtime": 1788395053.5395875,
+    "seen": 1794448739.8591104,
+    "ast_hash": "87ce547ea3f09d79f2b2819d237785fb",
+    "semantic_hash": "87ce547ea3f09d79f2b2819d237785fb"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/XR Interaction Simulator/Scripts/XRInteractionSimulatorInputFeedbackUI.cs": {
+    "mtime": 1788395053.5456502,
+    "seen": 1794448739.8591118,
+    "ast_hash": "a767fd45770f3a542edf9b7231b703bc",
+    "semantic_hash": "a767fd45770f3a542edf9b7231b703bc"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/XR Interaction Simulator/Scripts/XRInteractionSimulatorPlayModeMenu.cs": {
+    "mtime": 1788395053.5471685,
+    "seen": 1794448739.8591127,
+    "ast_hash": "d326294dfd11609abe58e11a1121cb1e",
+    "semantic_hash": "d326294dfd11609abe58e11a1121cb1e"
+  },
+  "Assets/Scripts/GameState/ScoreKeeper.cs": {
+    "mtime": 1794363925.720376,
+    "seen": 1794448739.8591137,
+    "ast_hash": "21620427d32a27ba024610ce4b9ed2a8",
+    "semantic_hash": "21620427d32a27ba024610ce4b9ed2a8"
+  },
+  "Assets/Scripts/GameState/WorldRegister.cs": {
+    "mtime": 1794363925.7213748,
+    "seen": 1794448739.8591146,
+    "ast_hash": "6d4dfcdf8c34eb417bad6ed843bc2064",
+    "semantic_hash": "6d4dfcdf8c34eb417bad6ed843bc2064"
+  },
+  "Assets/Scripts/Globals/Prop.cs": {
+    "mtime": 1794363925.7223759,
+    "seen": 1794448739.8591158,
+    "ast_hash": "f7b824557db6b6f2957fd018441eb149",
+    "semantic_hash": "f7b824557db6b6f2957fd018441eb149"
+  },
+  "Assets/Scripts/Globals/Role.cs": {
+    "mtime": 1794363925.723374,
+    "seen": 1794448739.8591168,
+    "ast_hash": "e2260e3ca54bd77368279ad23a619549",
+    "semantic_hash": "e2260e3ca54bd77368279ad23a619549"
+  },
+  "Assets/Scripts/Globals/Team.cs": {
+    "mtime": 1794363925.7243743,
+    "seen": 1794448739.8591175,
+    "ast_hash": "04920d40cf8063c8fc5791c6f69d54cd",
+    "semantic_hash": "04920d40cf8063c8fc5791c6f69d54cd"
+  },
+  "Assets/Scripts/Globals/Zone.cs": {
+    "mtime": 1794363925.7243743,
+    "seen": 1794448739.8591182,
+    "ast_hash": "3e6f1750f487754d0bd426495d67b46e",
+    "semantic_hash": "3e6f1750f487754d0bd426495d67b46e"
+  },
+  "Assets/Scripts/Handlers/UI.cs": {
+    "mtime": 1794363925.725374,
+    "seen": 1794448739.8591194,
+    "ast_hash": "bf6cb679d9d5274742ff27bf91198bd5",
+    "semantic_hash": "bf6cb679d9d5274742ff27bf91198bd5"
+  },
+  "Assets/Scripts/Handlers/World.cs": {
+    "mtime": 1794363925.726374,
+    "seen": 1794448739.8591204,
+    "ast_hash": "fc6154618f596e59f5b278110d870cac",
+    "semantic_hash": "fc6154618f596e59f5b278110d870cac"
+  },
+  "Assets/Scripts/MainMenu/GameSettings.cs": {
+    "mtime": 1794363925.7273777,
+    "seen": 1794448739.8591213,
+    "ast_hash": "3e99e4384256b2b80dc696017c92b3b9",
+    "semantic_hash": "3e99e4384256b2b80dc696017c92b3b9"
+  },
+  "Assets/Scripts/MainMenu/VRMainMenu.cs": {
+    "mtime": 1794363925.728374,
+    "seen": 1794448739.8591225,
+    "ast_hash": "94e46af69a2a30d5af15dae61db472f8",
+    "semantic_hash": "94e46af69a2a30d5af15dae61db472f8"
+  },
+  "Assets/Scripts/Physics/ArcMoveProvider.cs": {
+    "mtime": 1794363925.730374,
+    "seen": 1794448739.8591235,
+    "ast_hash": "2f1a30b42d86b9169ded2c6ce9f1ec5c",
+    "semantic_hash": "2f1a30b42d86b9169ded2c6ce9f1ec5c"
+  },
+  "Assets/Scripts/Physics/FreezeTransform.cs": {
+    "mtime": 1794363925.7313752,
+    "seen": 1794448739.8591244,
+    "ast_hash": "a8dbbd8e2810c01c5a91693cd1939175",
+    "semantic_hash": "a8dbbd8e2810c01c5a91693cd1939175"
+  },
+  "Assets/Scripts/Physics/MeshToggler.cs": {
+    "mtime": 1794363925.7313752,
+    "seen": 1794448739.8591256,
+    "ast_hash": "9c4d6fb70576d0ac77a3e3c2833186d6",
+    "semantic_hash": "9c4d6fb70576d0ac77a3e3c2833186d6"
+  },
+  "Assets/Scripts/StateMachine/PlayerAwareness.cs": {
+    "mtime": 1794437388.5323176,
+    "seen": 1794448739.8591266,
+    "ast_hash": "fe1302500f0def3ef0d30344e095ae50",
+    "semantic_hash": "fe1302500f0def3ef0d30344e095ae50"
+  },
+  "Assets/Scripts/StateMachine/PlayerNavigation.cs": {
+    "mtime": 1794440979.4390287,
+    "seen": 1794448739.8591275,
+    "ast_hash": "2cf108426869b4e61c314bf3fefd0899",
+    "semantic_hash": "2cf108426869b4e61c314bf3fefd0899"
+  },
+  "Assets/Scripts/StateMachine/PlayerStateMachine.cs": {
+    "mtime": 1794442768.323034,
+    "seen": 1794448739.8591285,
+    "ast_hash": "2dc60d21d654f6f6b7a0d48314e3ba4d",
+    "semantic_hash": "2dc60d21d654f6f6b7a0d48314e3ba4d"
+  },
+  "Assets/Scripts/TrackedItems/Ball.cs": {
+    "mtime": 1794363925.7366643,
+    "seen": 1794448739.8591297,
+    "ast_hash": "a3a1db73597c67a44ae10b81d0618edd",
+    "semantic_hash": "a3a1db73597c67a44ae10b81d0618edd"
+  },
+  "Assets/Scripts/TrackedItems/Center.cs": {
+    "mtime": 1794363925.7376685,
+    "seen": 1794448739.8591304,
+    "ast_hash": "8e9a74c9b414e12a94cd65b2fbe4d16f",
+    "semantic_hash": "8e9a74c9b414e12a94cd65b2fbe4d16f"
+  },
+  "Assets/Scripts/TrackedItems/Field.cs": {
+    "mtime": 1794363925.7390008,
+    "seen": 1794448739.8591313,
+    "ast_hash": "2eb8151c78cf1e5933f0d0f020c59e9c",
+    "semantic_hash": "2eb8151c78cf1e5933f0d0f020c59e9c"
+  },
+  "Assets/Scripts/TrackedItems/Goal.cs": {
+    "mtime": 1794363925.7396684,
+    "seen": 1794448739.859133,
+    "ast_hash": "e382c85c29964d1c6d9125acd85a6e1d",
+    "semantic_hash": "e382c85c29964d1c6d9125acd85a6e1d"
+  },
+  "Assets/Scripts/TrackedItems/Pen.cs": {
+    "mtime": 1794363925.7406719,
+    "seen": 1794448739.859134,
+    "ast_hash": "2968188227ba31ad0000d58607342329",
+    "semantic_hash": "2968188227ba31ad0000d58607342329"
+  },
+  "Assets/Scripts/TrackedItems/Player.cs": {
+    "mtime": 1794440221.5755436,
+    "seen": 1794448739.859135,
+    "ast_hash": "7f6d319b5b77825f387eedad711cbcdf",
+    "semantic_hash": "7f6d319b5b77825f387eedad711cbcdf"
+  },
+  "Assets/Scripts/Transition/ScreenFader.cs": {
+    "mtime": 1794363925.7427466,
+    "seen": 1794448739.859136,
+    "ast_hash": "692fdbea5429b67c3ba8a36472e75feb",
+    "semantic_hash": "692fdbea5429b67c3ba8a36472e75feb"
+  },
+  "Assets/TextMesh Pro/Sprites/EmojiOne.json": {
+    "mtime": 1794363925.7913024,
+    "seen": 1794448739.859137,
+    "ast_hash": "53408097aa38738c15b17ca34e13882a",
+    "semantic_hash": "53408097aa38738c15b17ca34e13882a"
+  },
+  "Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs": {
+    "mtime": 1788395053.5942774,
+    "seen": 1794448739.859138,
+    "ast_hash": "8092f1aee92852ae5091cd1e845d48df",
+    "semantic_hash": "8092f1aee92852ae5091cd1e845d48df"
+  },
+  "Assets/TutorialInfo/Scripts/Readme.cs": {
+    "mtime": 1788395053.594791,
+    "seen": 1794448739.8591387,
+    "ast_hash": "7c8eeb74a94701a4b4a5b5f8d6259965",
+    "semantic_hash": "7c8eeb74a94701a4b4a5b5f8d6259965"
+  },
+  "Packages/manifest.json": {
+    "mtime": 1794363926.8036857,
+    "seen": 1794448739.85914,
+    "ast_hash": "37ac9c9855e27c2615f8e2aebe509ffd",
+    "semantic_hash": "37ac9c9855e27c2615f8e2aebe509ffd"
+  },
+  "Packages/packages-lock.json": {
+    "mtime": 1794363926.8036857,
+    "seen": 1794448739.859141,
+    "ast_hash": "78f72c91e6c4ad776e3b08946fe13c1c",
+    "semantic_hash": "78f72c91e6c4ad776e3b08946fe13c1c"
+  },
+  "Powered-Wheelchair-Soccer.slnx": {
+    "mtime": 1794363926.8046854,
+    "seen": 1794448739.8591418,
+    "ast_hash": "a643060445e2671caf0cbc9323d00fc8",
+    "semantic_hash": "a643060445e2671caf0cbc9323d00fc8"
+  },
+  "ProjectSettings/SceneTemplateSettings.json": {
+    "mtime": 1788395053.6054237,
+    "seen": 1794448739.859143,
+    "ast_hash": "3620a2b0a1c79cc4ae4b6b6ad599ff4d",
+    "semantic_hash": "3620a2b0a1c79cc4ae4b6b6ad599ff4d"
+  },
+  "Assets/Samples/XR Interaction Toolkit/3.3.2/Starter Assets/DemoSceneAssets/Audio/Button Pop.wav": {
+    "mtime": 1788395053.363091,
+    "seen": 1794448739.859144,
+    "ast_hash": "78382a87b9b4b37b7c3c3ad7802bb4aa",
+    "semantic_hash": "78382a87b9b4b37b7c3c3ad7802bb4aa"
+  }
+}
