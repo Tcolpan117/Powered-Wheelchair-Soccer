@@ -8,32 +8,24 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerNavigation : MonoBehaviour
 {
-    // 1. Configure sampling here; configure agent type, areas, and stopping distance
-    // on the NavMeshAgent itself so there is only one source for those settings.
-    [SerializeField, Min(0.1f)] private float sampleDistance = 2f;
-    [SerializeField, Min(0.01f)] private float maxHorizontalSnap = 0.15f;
-
+    // 1. Tuning. Agent type, areas and stopping distance live on the NavMeshAgent itself,
+    // so there is only one source for those settings.
+    private const float SampleDistance = 2f;    // A target this close to the NavMesh can still be routed to.
+    private const float MaxSnap = 0.15f;        // A chair further than this off the NavMesh gets no route.
     private const float RepathInterval = 0.2f;
+    private const float RepathDistance = 0.25f; // Re-route when the target moves this far.
+
     private NavMeshAgent agent;
     private float nextPathTime;
-    private Vector3 requestedTarget;
-    private bool destinationRequested;
+    private Vector3? requestedTarget;
 
-    private bool AgentReady => agent != null && agent.isActiveAndEnabled && agent.isOnNavMesh;
-    public bool HasPath => isActiveAndEnabled && AgentReady && !agent.pathPending
-        && agent.hasPath && agent.pathStatus == NavMeshPathStatus.PathComplete;
     public Vector3 Direction { get; private set; }
+    private bool AgentReady => agent != null && agent.isActiveAndEnabled && agent.isOnNavMesh;
 
     // 2. Use the agent for planning without letting it move the physics-driven chair.
     private void Awake()
     {
-        if (!TryGetComponent(out agent))
-        {
-            Debug.LogError("PlayerNavigation requires a NavMeshAgent on this player.", this);
-            enabled = false;
-            return;
-        }
-
+        agent = GetComponent<NavMeshAgent>();
         agent.updatePosition = false;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -50,16 +42,16 @@ public class PlayerNavigation : MonoBehaviour
         Direction = Vector3.zero;
         if (!isActiveAndEnabled || !AgentReady || Arrived(target))
         {
-            Stop();
+            ClearPath();
             return;
         }
 
         // The physical chair leads; the agent must not simulate driving ahead of it.
         agent.isStopped = true;
         agent.nextPosition = transform.position;
-        if (Distance(agent.nextPosition, transform.position) > maxHorizontalSnap)
+        if (Distance(agent.nextPosition, transform.position) > MaxSnap)
         {
-            Stop();
+            ClearPath();
             return;
         }
 
@@ -69,30 +61,23 @@ public class PlayerNavigation : MonoBehaviour
             return;
         }
 
-        if (Time.time >= nextPathTime
-            && (!destinationRequested || (target - requestedTarget).sqrMagnitude > 0.0625f
-                || !agent.hasPath || agent.isPathStale))
+        bool targetMoved = requestedTarget == null
+            || (target - requestedTarget.Value).sqrMagnitude > RepathDistance * RepathDistance;
+        if (Time.time >= nextPathTime && (targetMoved || !agent.hasPath || agent.isPathStale))
         {
             nextPathTime = Time.time + RepathInterval;
-            var filter = new NavMeshQueryFilter
-            {
-                agentTypeID = agent.agentTypeID,
-                areaMask = agent.areaMask
-            };
-
-            if (!NavMesh.SamplePosition(target, out NavMeshHit hit, sampleDistance, filter)
+            var filter = new NavMeshQueryFilter { agentTypeID = agent.agentTypeID, areaMask = agent.areaMask };
+            if (!NavMesh.SamplePosition(target, out NavMeshHit hit, SampleDistance, filter)
                 || !agent.SetDestination(hit.position))
             {
-                Stop();
+                ClearPath();
                 return;
             }
             requestedTarget = target;
-            destinationRequested = true;
         }
 
         // Path calculation is asynchronous. Never steer along a partial or pending route.
-        if (!HasPath || agent.isOnOffMeshLink) return;
-
+        if (!agent.hasPath || agent.pathStatus != NavMeshPathStatus.PathComplete || agent.isOnOffMeshLink) return;
         Vector3 direction = agent.steeringTarget - transform.position;
         direction.y = 0f;
         Direction = direction.normalized;
@@ -102,13 +87,11 @@ public class PlayerNavigation : MonoBehaviour
         agent != null && Distance(transform.position, target) <= agent.stoppingDistance;
 
     // 4. Clear Unity's route when stopping, changing state, or resetting the match.
-    public void Stop() => ClearPath();
-
     public void ClearPath()
     {
         Direction = Vector3.zero;
         nextPathTime = 0f;
-        destinationRequested = false;
+        requestedTarget = null;
         if (!AgentReady) return;
 
         agent.isStopped = true;

@@ -2,50 +2,46 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Senses players and the ball inside a horizontal bubble, optionally limited by a pen.
+/// Senses the ball and nearby players inside a horizontal bubble, and picks one pursuer per team.
 /// Refresh updates the snapshot; queries read that snapshot until the next scan.
 /// </summary>
 [RequireComponent(typeof(Player))]
 public class PlayerAwareness : MonoBehaviour
 {
-    // 1. Configure the sensing area.
-    [Tooltip("Fallback radius when this player has no SpaceBubble sphere collider.")]
-    [SerializeField, Min(0.1f)] private float radius = 4f;
-    [SerializeField] private Pen pen;
-    [SerializeField] private string ballId = nameof(Prop.Ball);
-
+    // 1. Tuning.
+    private const float FallbackRadius = 4f;       // Used when this player has no SpaceBubble sphere collider.
     private const float ScanInterval = 0.1f;
-    private const float ForwardConeCosine = 0.5f; // 60 degrees to either side.
+    private const float ScenePlayersInterval = 0.5f;
+    private const float ForwardConeCosine = 0.5f;  // 60 degrees to either side.
     private const float TurnPenaltyMeters = 3f;
+    private const float ReassignInterval = 0.25f;  // How often pursuers are reconsidered.
+    private const float MinAssignment = 0.75f;     // A new pursuer keeps the job at least this long.
+    private const float SwitchMargin = 0.75f;      // A challenger must be this much cheaper to take over.
+
     private readonly List<Player> nearbyPlayers = new();
     private Player self;
     private SphereCollider spaceBubble;
     private float nextScan;
+    private float scanPhase; // Spreads chairs' scans across frames instead of all on one.
 
     public IReadOnlyList<Player> NearbyPlayers => nearbyPlayers;
     public Ball Ball { get; private set; }
-    public bool BallInBubble { get; private set; }
 
-    // All chairs scanning in one frame can share Unity's scene lookup.
+    // Shared by every chair: one scene lookup, and one pursuer decision per team (indexed by Team).
     private static Player[] scenePlayers;
-    private static int scenePlayersFrame = -1;
-    private static readonly Dictionary<Team, Player> pursuers = new();
-    private static readonly Dictionary<Team, float> assignmentUntil = new();
+    private static float scenePlayersUntil;
+    private static readonly Player[] pursuers = new Player[2];
+    private static readonly float[] assignedUntil = new float[2];
     private static float nextAssignment;
 
-    public static void ResetPursuers()
-    {
-        pursuers.Clear();
-        assignmentUntil.Clear();
-        nextAssignment = 0f;
-    }
-
-    // 2. Initialize references and reset shared data when entering Play mode.
+    // 2. Initialize references and reset shared data when entering Play mode or after a goal.
     private void Awake()
     {
         self = GetComponent<Player>();
         spaceBubble = transform.Find("SpaceBubble")?.GetComponent<SphereCollider>();
+        scanPhase = Random.value * ScanInterval;
     }
+
     private void OnEnable() => Invalidate();
     private void OnDisable() => Invalidate();
 
@@ -53,120 +49,103 @@ public class PlayerAwareness : MonoBehaviour
     {
         nextScan = 0f;
         Ball = null;
-        BallInBubble = false;
         nearbyPlayers.Clear();
-        scenePlayersFrame = -1;
+        scenePlayersUntil = 0f;
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-    private static void ResetScenePlayers()
+    public static void ResetPursuers()
     {
-        ResetPursuers();
+        pursuers[0] = pursuers[1] = null;
+        assignedUntil[0] = assignedUntil[1] = 0f;
+        nextAssignment = 0f;
         scenePlayers = null;
-        scenePlayersFrame = -1;
+        scenePlayersUntil = 0f;
     }
 
-    // 3. Refresh the snapshot at a fixed cadence.
+    // 3. Refresh the snapshot on this chair's own phase of the scan interval.
     public void Refresh()
     {
         if (!isActiveAndEnabled || Time.time < nextScan) return;
-        nextScan = Time.time + ScanInterval;
+        nextScan = (Mathf.Floor((Time.time - scanPhase) / ScanInterval) + 1f) * ScanInterval + scanPhase;
 
-        Ball = WorldRegister.TryGetItem(ballId, out RegistryItem item)
+        Ball = WorldRegister.TryGetItem(nameof(Prop.Ball), out RegistryItem item)
             && item.gameObject != null ? item.Get<Ball>() : null;
         if (Ball != null && !Ball.isActiveAndEnabled) Ball = null;
-        BallInBubble = Ball != null && Contains(Ball.GetPosition());
 
+        Bounds bubble = BubbleBounds;
+        float radius = bubble.extents.x;
         nearbyPlayers.Clear();
-        foreach (Player player in GetScenePlayers())
+        foreach (Player player in ScenePlayers())
         {
-            if (player != null && player != self && player.isActiveAndEnabled
-                && Contains(player.GetPosition()))
-                nearbyPlayers.Add(player);
+            if (player == null || player == self || !player.isActiveAndEnabled) continue;
+            Vector3 offset = player.GetPosition() - bubble.center;
+            offset.y = 0f;
+            if (radius > 0f && offset.sqrMagnitude <= radius * radius) nearbyPlayers.Add(player);
         }
     }
 
-    // 4. Answer spatial questions on the court's XZ plane.
-    public bool Contains(Vector3 position)
-    {
-        Bounds bubble = BubbleBounds;
-        Vector3 offset = position - bubble.center;
-        offset.y = 0f;
-        float bubbleRadius = bubble.extents.x;
-        if (bubbleRadius <= 0f || offset.sqrMagnitude > bubbleRadius * bubbleRadius) return false;
-        if (pen == null) return true;
-
-        // Like Pen.GetBounds, use geometry even when MeshToggler hides the renderer.
-        return pen.TryGetComponent<Renderer>(out var renderer)
-            && ContainsOnCourt(renderer.bounds, position);
-    }
-
-    public static bool ContainsOnCourt(Bounds bounds, Vector3 position)
-    {
-        position.y = bounds.center.y;
-        return bounds.Contains(position);
-    }
-
-    // Both teams share one decision, so every chair agrees on its team's pursuer.
+    // 4. Both teams share one decision, so every chair agrees on its team's pursuer.
     public Player GetPursuer(Team team)
     {
         if (Ball == null || !Ball.isActiveAndEnabled) return null;
         if (Time.time >= nextAssignment)
         {
-            nextAssignment = Time.time + 0.25f;
+            nextAssignment = Time.time + ReassignInterval;
             ChoosePursuer(Team.Home);
             ChoosePursuer(Team.Away);
         }
-        return pursuers.TryGetValue(team, out var player) && Eligible(player, team) ? player : null;
+        Player pursuer = pursuers[(int)team];
+        return Eligible(pursuer, team) ? pursuer : null;
     }
 
+    private void ChoosePursuer(Team team)
+    {
+        Vector3 ball = Ball.GetPosition();
+        Player best = null;
+        float bestCost = float.PositiveInfinity;
+        foreach (Player candidate in ScenePlayers())
+        {
+            if (!Eligible(candidate, team)) continue;
+            float cost = PursuitCost(candidate, ball);
+            // On a tie, the lower role number wins so the choice is stable.
+            if (cost < bestCost || (Mathf.Approximately(cost, bestCost) && best != null && candidate.Role < best.Role))
+            {
+                best = candidate;
+                bestCost = cost;
+            }
+        }
+
+        // Keep the current pursuer for its minimum time, and unless a challenger is clearly better.
+        int index = (int)team;
+        Player current = pursuers[index];
+        if (Eligible(current, team)
+            && (Time.time < assignedUntil[index] || PursuitCost(current, ball) <= bestCost + SwitchMargin))
+            return;
+
+        pursuers[index] = best;
+        assignedUntil[index] = Time.time + MinAssignment;
+    }
+
+    // Distance to the ball plus a penalty for having to turn toward it.
     private static float PursuitCost(Player candidate, Vector3 ball)
     {
         Vector3 to = ball - candidate.GetPosition();
         to.y = 0f;
         float distance = to.magnitude;
         if (distance < 0.01f) return 0f;
-
         Vector3 forward = candidate.transform.forward;
         forward.y = 0f;
         return distance + Vector3.Angle(forward, to) / 180f * TurnPenaltyMeters;
     }
 
-    private void ChoosePursuer(Team team)
-    {
-        Vector3 ball = Ball.GetPosition();
-        Player nearest = null;
-        float bestCost = float.PositiveInfinity;
-        foreach (Player candidate in GetScenePlayers())
-        {
-            if (!Eligible(candidate, team)) continue;
-            float cost = PursuitCost(candidate, ball);
-            if (cost < bestCost
-                || (Mathf.Approximately(cost, bestCost)
-                    && nearest != null && (int)candidate.Role < (int)nearest.Role))
-            {
-                nearest = candidate;
-                bestCost = cost;
-            }
-        }
-
-        pursuers.TryGetValue(team, out var current);
-        if (Eligible(current, team))
-        {
-            if (assignmentUntil.TryGetValue(team, out float until) && Time.time < until) return;
-            if (PursuitCost(current, ball) <= bestCost + 0.75f) return;
-        }
-
-        pursuers[team] = nearest;
-        assignmentUntil[team] = Time.time + 0.75f;
-    }
-
     private static bool Eligible(Player player, Team team) =>
         player != null && player.isActiveAndEnabled && player.Team == team && player.Role != Role.Goaly
         && (player.IsPossessed()
-            || (player.TryGetComponent<PlayerStateMachine>(out var machine) && machine.isActiveAndEnabled
-                && player.TryGetComponent<PlayerNavigation>(out var navigation) && navigation.isActiveAndEnabled));
+            || (player.TryGetComponent(out PlayerStateMachine machine) && machine.isActiveAndEnabled
+                && player.TryGetComponent(out PlayerNavigation navigation) && navigation.isActiveAndEnabled));
 
+    // 5. True when a human-driven teammate or this team's pursuer is close ahead in the given direction.
     public bool TeammateAhead(float distance, Vector3 direction)
     {
         direction.y = 0f;
@@ -186,13 +165,15 @@ public class PlayerAwareness : MonoBehaviour
         }
         return false;
     }
-    // 5. Keep discovery and editor visualization separate from sensing.
-    private static Player[] GetScenePlayers()
+
+    // 6. Discovery and editor visualization.
+    private static Player[] ScenePlayers()
     {
-        if (scenePlayers == null || scenePlayersFrame != Time.frameCount)
+        // shortcut: a Player with no PlayerAwareness that spawns mid-match is seen up to 0.5 s late.
+        if (scenePlayers == null || Time.time >= scenePlayersUntil)
         {
             scenePlayers = FindObjectsByType<Player>(FindObjectsSortMode.None);
-            scenePlayersFrame = Time.frameCount;
+            scenePlayersUntil = Time.time + ScenePlayersInterval;
         }
         return scenePlayers;
     }
@@ -201,13 +182,13 @@ public class PlayerAwareness : MonoBehaviour
     // Disabled colliders have empty bounds, so a disabled bubble senses nothing.
     private Bounds BubbleBounds => spaceBubble != null
         ? spaceBubble.bounds
-        : new Bounds(transform.position, Vector3.one * (radius * 2f));
+        : new Bounds(transform.position, Vector3.one * (FallbackRadius * 2f));
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.cyan;
         // Awake has not run in edit mode; let the existing collider draw its own outline.
         if (!Application.isPlaying && transform.Find("SpaceBubble") != null) return;
+        Gizmos.color = Color.cyan;
         Bounds bubble = BubbleBounds;
         Gizmos.DrawWireSphere(bubble.center, bubble.extents.x);
     }

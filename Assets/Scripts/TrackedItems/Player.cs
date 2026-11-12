@@ -67,6 +67,7 @@ public class Player : MonoBehaviour, IRegistryProvider
     [SerializeField, Min(0.1f)] private float driveSpeed = 3f;
     [SerializeField, Min(0.1f)] private float driveAcceleration = 8f;
     [SerializeField, Min(1f)] private float turnSpeed = 100f;
+    private const float ReverseSpeedFraction = 0.4f; // Reversing speed as a fraction of driveSpeed.
 
     public RegistryItem item { get; private set; }
     public Team Team => team;
@@ -198,8 +199,13 @@ public class Player : MonoBehaviour, IRegistryProvider
             forward.y = 0f;
             forward.Normalize();
 
-            // Turn in place for sharp corners; accelerate as the chair faces its route.
-            float alignment = Mathf.InverseLerp(0.5f, 1f, Vector3.Dot(forward, driveDirection));
+            // Keep rolling while turning, reaching full speed within about 45 degrees of the route.
+            // When the route is behind the chair, back up slowly while turning, like a real powerchair:
+            // a chair wedged against a wall or goal cannot pivot in place, but it can reverse out.
+            float dot = Vector3.Dot(forward, driveDirection);
+            float alignment = dot >= 0f
+                ? Mathf.InverseLerp(0f, 0.7f, dot)
+                : -ReverseSpeedFraction * Mathf.InverseLerp(0f, -0.7f, dot);
             desiredVelocity = forward * (driveSpeed * speedScale * alignment);
         }
 
